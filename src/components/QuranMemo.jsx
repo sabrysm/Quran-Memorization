@@ -6,11 +6,11 @@ function QuranMemo() {
   const [outputText, setOutputText] = useState("");
   const [saveButton, setSaveButton] = useState("Save");
   const [clearButton, setClearButton] = useState("Clear");
-  // take the surah name and range of ayahs from the user
+
+  // get surah name, start ayah, end ayah from user
   const [surahName, setSurahName] = useState("");
   const [startAyah, setStartAyah] = useState(1);
   const [endAyah, setEndAyah] = useState("");
-  // Make a button to save outputText to a txt file
   const [counter, setCounter] = useState(startAyah);
   const handleSaveButton = () => {
     const element = document.createElement("a");
