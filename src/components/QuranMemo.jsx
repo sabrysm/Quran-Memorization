@@ -4,14 +4,14 @@ import "../App.css";
 function QuranMemo() {
   const [inputText, setInputText] = useState("");
   const [outputText, setOutputText] = useState("");
-  const [counter, setCounter] = useState(1);
   const [saveButton, setSaveButton] = useState("Save");
   const [clearButton, setClearButton] = useState("Clear");
   // take the surah name and range of ayahs from the user
   const [surahName, setSurahName] = useState("");
-  const [startAyah, setStartAyah] = useState("");
+  const [startAyah, setStartAyah] = useState(1);
   const [endAyah, setEndAyah] = useState("");
   // Make a button to save outputText to a txt file
+  const [counter, setCounter] = useState(startAyah);
   const handleSaveButton = () => {
     const element = document.createElement("a");
     const file = new Blob([outputText], { type: "text/plain" });
@@ -25,6 +25,9 @@ function QuranMemo() {
     setOutputText("");
     setCounter(1);
     setClearButton("Cleared");
+    setSurahName("");
+    setStartAyah(1);
+    setEndAyah("");
   };
 
   const handleInputChange = (event) => {
@@ -33,9 +36,13 @@ function QuranMemo() {
     setSaveButton("Save");
   };
 
+  const handleStartAyahChange = (event) => {
+    setStartAyah(event.target.value);
+    setCounter(parseInt(event.target.value));
+  };
+
   const handleInputKeyDown = (event) => {
     if (event.key === "Enter") {
-      // make the counter appear inside a quranic ayah format
       setOutputText(outputText + counter + "..." + inputText + "\n");
       setCounter(counter + 1);
       setInputText("");
@@ -56,7 +63,7 @@ function QuranMemo() {
           <input
             type="text"
             value={startAyah}
-            onChange={(event) => setStartAyah(event.target.value)}
+            onChange={handleStartAyahChange}
             placeholder="بداية الآية"
           />
           <input
