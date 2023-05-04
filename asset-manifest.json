@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Quran-Memorization/static/css/main.2aeb6cac.css",
+    "main.js": "/Quran-Memorization/static/js/main.fad7d887.js",
+    "static/js/787.6496fdd8.chunk.js": "/Quran-Memorization/static/js/787.6496fdd8.chunk.js",
+    "index.html": "/Quran-Memorization/index.html",
+    "main.2aeb6cac.css.map": "/Quran-Memorization/static/css/main.2aeb6cac.css.map",
+    "main.fad7d887.js.map": "/Quran-Memorization/static/js/main.fad7d887.js.map",
+    "787.6496fdd8.chunk.js.map": "/Quran-Memorization/static/js/787.6496fdd8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2aeb6cac.css",
+    "static/js/main.fad7d887.js"
+  ]
+}
