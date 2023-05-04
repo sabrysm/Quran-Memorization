@@ -21,6 +21,7 @@ function QuranMemo() {
     element.click();
     setSaveButton("Saved");
   };
+  
   const handleClearButton = () => {
     setOutputText("");
     setCounter(1);
